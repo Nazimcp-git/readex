@@ -1,22 +1,19 @@
-var countDownDate = new Date();
-    // Replace with desired date 'January 17, 2019 03:24:00', example
-    countDownDate.setDate('May 17, 2023 03:24:00');
-    countDownDate.getTime();
+var countDownDate = new Date("May 17, 2023 15:37:25").getTime();
 
-    // Update the count down every 1 second
-    var x = setInterval(function () {
+// Update the count down every 1 second
+var x = setInterval(function() {
 
-      // Get todays date and time
-      var now = new Date().getTime();
+  // Get today's date and time
+  var now = new Date().getTime();
 
-      // Find the distance between now an the count down date
-      var distance = countDownDate - now;
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
 
-      // Time calculations for days, hours, minutes and seconds
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
       
       if (distance > 0) {
         $("div[name='seconds']").html(seconds);
@@ -32,4 +29,4 @@ var countDownDate = new Date();
       }
 
     }, 1000);
-
+    
