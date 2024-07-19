@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    box-sizing: border-box;
+    
+    margin: 0;
+    padding: 0;
+  }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+  }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #700000;
+    padding: 15px 90px;
+    position: relative;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+.brand-title img{
+    width: 20%;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.navbar-links li {
+    margin-left: 1rem;
+}
+
+.navbar-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: small;
+    padding: 3px 25px;
+    border-radius: 50px;
+    font-weight: 400;
+}
+.navbar-links .buy{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        background-color: #FFAB49;
+        font-size: small;
+        padding: 3px 25px;
+        border-radius: 50px;
+}
+.navbar-links .nobuy{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: #930000;
+    font-size: small;
+    padding: 3px 25px;
+    border-radius: 50px;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 1.5rem;
+    right: 4rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    margin-right: -15px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.mobile{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile{
+        display: block;
+        line-height: 30px;
+    }
+    .desk{
+        display: none;
+    }
+    .navbar{
+        padding: 15px 40px;
+        position: fixed;
+        z-index: 11;
+    }
+    .toggle-button {
+        display: flex;
+        margin-top: 4px;
+    }
+    .brand-title img{
+        width: 40%;
+        margin-top: 2px;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 250px;
+        padding-top: 2rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        text-align: left;
+        box-shadow: 2px 2px black;
+        z-index: 10;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navbar-links li {
+        text-align: left;
+        margin: 1rem 0;
+    }
+
+    .navbar-links.active {
+        display: flex;
+        transform: translateX(0);
+        background-color: white;
+    }
+    .navbar-links .buy{
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        background-color: ;
+        outline: 0px solid black;
+        
+    background-color: white;
+        font-size: medium;
+        padding: 3px 25px;
+        border-radius: 50px;
+        font-weight: 500;
+}
+.navbar-links .nobuy{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: white;
+    outline: 0px solid black;
+    font-size: medium;
+    padding: 3px 25px;
+    border-radius: 50px;
+    font-weight: 500;
+}
+.home .section{
+    margin-top: 90px;
+}
+.imgframe{
+    margin-top: 90px;
+}
+}
+
+hr{
+    margin: 0;
+    padding: 0;
+    opacity: 0.3;
+}
+
+.home{
+    padding: 50px 180px;
+}
+.home .section{
+        display: flex;
+    
+}
+.col1{
+    width: 50%;
+}
+.col2{
+    width: 50%;
+}
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    touch-action: pan-y;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    border-radius: 15px;
+    width: 50%;
+}
+.imgframe{
+    width: 100%;
+}
+.dot-container {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+@media (max-width: 768px){
+    .home{
+        padding: 30px 30px;
+    }
+    .home .section{
+            display: block;
+            align-items: center;
+        
+    }
+    .mobile{
+        display: block;
+        line-height: 30px;
+    }
+    .desk{
+        display: none;
+    }
+    .home .col1 .data{
+        opacity: 0.7;
+    }
+    .home .col3 .data{
+        opacity: 0.7;
+    }
+    .home .section .col2 img{
+        width: 80%;
+        margin-bottom: 0px;
+    }
+    .dot{
+        margin-bottom: 25px;
+    }
+}
+
+
+
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 40%; /* Adjust as needed */
+    max-width: 800px; /* Adjust as needed */
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
