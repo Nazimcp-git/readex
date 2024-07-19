@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product - Readex Adjustable Quran Stand</title>
-    <link rel="stylesheet" href="product-style.css">
+    <link rel="stylesheet" href="css/product-style.css">
 </head>
 <body>
     <nav class="navbar">
@@ -204,10 +204,12 @@ function closeModal() {
 
 </script>
 <script>
+    // Store the quantity value in local storage on button click
     document.getElementById('buynoww').addEventListener('click', function() {
-    window.location.href = '/checkout.html';
-});
-
-</script>
-<script src="script.js"></script>
+        const qua = document.getElementById('quantity').value; // Get the value of the input
+        localStorage.setItem('quantity', qua); // Store the value in local storage
+        window.location.href = '/checkout.html'; // Redirect to checkout page
+    });
+  </script>
+<script src="js/script.js"></script>
 </html>

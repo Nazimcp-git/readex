@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check Out - Readex Adjustable Quran Stand</title>
-    <link rel="stylesheet" href="checkout-style.css">
+    <link rel="stylesheet" href="css/checkout-style.css">
 </head>
 <body>
     <nav class="navbar">
@@ -34,7 +34,7 @@
             </a>
             </div>
             <div class="col2">
-                <h3>Total : ₹<span id="price">3950</span></h3>
+                <h3>Total : ₹<span id="price"></span></h3>
                 
             </div>
             
@@ -78,5 +78,16 @@
         
     </div>
 </body>
-<script src="script.js"></script>
+<script src="js/script.js"></script>
+<script>
+    // Retrieve and display the quantity value when the page loads
+    window.addEventListener('DOMContentLoaded', function() {
+        const quantity = localStorage.getItem('quantity'); // Retrieve the value from local storage
+        const unitPrice = 3950; // Unit price
+        const totalPrice = unitPrice * quantity;
+        if (quantity) {
+            document.getElementById('price').innerHTML = `${totalPrice}`; // Display the value
+        }
+    });
+  </script>
 </html>
