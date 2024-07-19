@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="css/checkout-style.css">
 </head>
+
 <body>
     <nav class="navbar">
         <div class="brand-title"><img src="img/logow.png" alt=""></div>
@@ -26,20 +28,20 @@
         </div>
     </nav>
     <hr>
+
+    
     <div class="pricecard">
         <div class="section">
             <div class="col1">
                 <img src="img/logo.png" alt="" srcset="">
-            <h2>Adjustable Quran Stand</h2>
-            <a class="freedeli">
-                Free Delivery
-            </a>
+                <h2>Adjustable Quran Stand</h2>
+                <a class="freedeli">
+                    Free Delivery
+                </a>
             </div>
             <div class="col2">
                 <h3>Total : ₹<span id="price"></span></h3>
-                
             </div>
-            
         </div>
     </div>
 
@@ -57,40 +59,38 @@
             <div class="buynowbtn">
                 <div class="butbtncontent">
                     Payment </div>
-                    <div class="arrowshape">
-                        <div class="arrow">
-                            <img src="img/arrow.png" alt="">
-                        </div>
+                <div class="arrowshape">
+                    <div class="arrow">
+                        <img src="img/arrow.png" alt="">
                     </div>
-                    
-                
-                    
                 </div>
+            </div>
         </div>
     </div>
+
+
     <div class="footer">
         <div class="frame">
             <h1>Contact Us </h1>
             <p><b>Mobile Number :</b> +91 8921 324 114 </p>
             <p><b>Email :</b> readexindia@gmail.com</p>
             <p><b>Address :</b></p>
-                <p>Readex Crafts</p>
-                <p>Nellaya, Palakkad, Kerala, India. 679335</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/profile.php?id=100088842204776" target="_blank" class="icon facebook"></a>
-                    <a href="https://www.whatsapp.com/+918921324114" target="_blank" class="icon whatsapp"></a>
-                    <a href="https://www.instagram.com/readex.in" target="_blank" class="icon instagram"></a>
-                    <a href="https://www.youtube.com/@readexcrafts" target="_blank" class="icon linkedin"></a>
-                </div>
+            <p>Readex Crafts</p>
+            <p>Nellaya, Palakkad, Kerala, India. 679335</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100088842204776" target="_blank"
+                    class="icon facebook"></a>
+                <a href="https://www.whatsapp.com/+918921324114" target="_blank" class="icon whatsapp"></a>
+                <a href="https://www.instagram.com/readex.in" target="_blank" class="icon instagram"></a>
+                <a href="https://www.youtube.com/@readexcrafts" target="_blank" class="icon linkedin"></a>
+            </div>
         </div>
-        
-        
     </div>
 </body>
 <script src="js/script.js"></script>
 <script>
     // Retrieve and display the quantity value when the page loads
-    window.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('DOMContentLoaded', function () {
         const quantity = localStorage.getItem('quantity'); // Retrieve the value from local storage
         const unitPrice = 3950; // Unit price
         const totalPrice = unitPrice * quantity;
@@ -98,5 +98,6 @@
             document.getElementById('price').innerHTML = `${totalPrice}`; // Display the value
         }
     });
-  </script>
+</script>
+
 </html>

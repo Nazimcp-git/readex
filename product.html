@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="css/product-style.css">
 </head>
+
 <body>
     <nav class="navbar">
         <div class="brand-title"><img src="img/logow.png" alt=""></div>
@@ -45,32 +47,32 @@
                         </div>
                     </div>
                     <div class="dot-container">
-                        <span class="dot" onclick="currentSlide(1)"></span> 
-                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
                         <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span> 
+                        <span class="dot" onclick="currentSlide(4)"></span>
                     </div>
                 </div>
-                
+
             </div>
             <div class="col2">
-                <h1>Readex-Adjustable 
+                <h1>Readex-Adjustable
                     Quran Stand</h1>
-                    <p class="price">₹3950 <del>₹4500</del> <span>Save upto ₹550</span></p>
-                    <p class="quantity">Quantity:</p>
-                    <div class="quantity-container">
-                        <button id="decrease" class="btn">-</button>
-                        <input type="text" id="quantity" value="1" readonly>
-                        <button id="increase" class="btn">+</button>
-                    </div>
-                    <div class="buynowbtn" id="buynoww">
-            <div class="butbtncontent">Buy Now</div>
-            <div class="arrowshape">
-                <div class="arrow">
-                    <img style="margin-left: 100px;" src="img/arrow.png" alt="">
+                <p class="price">₹3950 <del>₹4500</del> <span>Save upto ₹550</span></p>
+                <p class="quantity">Quantity:</p>
+                <div class="quantity-container">
+                    <button id="decrease" class="btn">-</button>
+                    <input type="text" id="quantity" value="1" readonly>
+                    <button id="increase" class="btn">+</button>
                 </div>
-            </div>
-        </div>
+                <div class="buynowbtn" id="buynoww">
+                    <div class="butbtncontent">Buy Now</div>
+                    <div class="arrowshape">
+                        <div class="arrow">
+                            <img style="margin-left: 100px;" src="img/arrow.png" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -91,7 +93,10 @@
                 <h1 class="dtitle">
                     Description
                 </h1>
-                <p class="discon">Enhance your Quran reading with our Readex Adjustable Quran Stand. Made from high-quality wood, it’s built to last. You can adjust the height up to 106 cm for comfortable standing reading. With wheels for easy movement, you can take it anywhere. Easy to set up and perfect for finding the ideal reading position, it helps you focus on the text effortlessly.</p>
+                <p class="discon">Enhance your Quran reading with our Readex Adjustable Quran Stand. Made from
+                    high-quality wood, it’s built to last. You can adjust the height up to 106 cm for comfortable
+                    standing reading. With wheels for easy movement, you can take it anywhere. Easy to set up and
+                    perfect for finding the ideal reading position, it helps you focus on the text effortlessly.</p>
                 <hr style="margin-bottom: 15px;">
                 <div class="details">
                     <div class="dcol1">
@@ -116,102 +121,103 @@
 <script>
     let slideIndex = 1;
     showSlides(slideIndex);
-    
+
     function currentSlide(n) {
         showSlides(slideIndex = n);
     }
-    
+
     function showSlides(n) {
         let slides = document.getElementsByClassName("mySlides");
         let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
         for (let i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
         for (let i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
     }
-    
+
     let touchstartX = 0;
     let touchendX = 0;
-    
+
     const slider = document.querySelector('.slideshow-container');
-    
+
     slider.addEventListener('touchstart', (e) => {
         touchstartX = e.changedTouches[0].screenX;
     }, false);
-    
+
     slider.addEventListener('touchend', (e) => {
         touchendX = e.changedTouches[0].screenX;
         handleGesture();
     }, false);
-    
+
     slider.addEventListener('mousedown', (e) => {
         touchstartX = e.clientX;
     }, false);
-    
+
     slider.addEventListener('mouseup', (e) => {
         touchendX = e.clientX;
         handleGesture();
     }, false);
-    
+
     function handleGesture() {
         if (touchendX < touchstartX) plusSlides(1);
         if (touchendX > touchstartX) plusSlides(-1);
     }
-    
+
     function plusSlides(n) {
         showSlides(slideIndex += n);
     }
-    </script>
-    
+</script>
+
 <script>
     // Open the Modal
-function openModal(imageUrl) {
-    var modal = document.getElementById('myModal');
-    var modalImg = document.getElementById("modalImg");
-    modal.style.display = "block";
-    modalImg.src = imageUrl;
-}
+    function openModal(imageUrl) {
+        var modal = document.getElementById('myModal');
+        var modalImg = document.getElementById("modalImg");
+        modal.style.display = "block";
+        modalImg.src = imageUrl;
+    }
 
-// Close the Modal
-function closeModal() {
-    var modal = document.getElementById('myModal');
-    modal.style.display = "none";
-}
+    // Close the Modal
+    function closeModal() {
+        var modal = document.getElementById('myModal');
+        modal.style.display = "none";
+    }
 
 </script>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-    const decreaseButton = document.getElementById("decrease");
-    const increaseButton = document.getElementById("increase");
-    const quantityInput = document.getElementById("quantity");
+    document.addEventListener("DOMContentLoaded", function () {
+        const decreaseButton = document.getElementById("decrease");
+        const increaseButton = document.getElementById("increase");
+        const quantityInput = document.getElementById("quantity");
 
-    decreaseButton.addEventListener("click", function() {
-        let currentValue = parseInt(quantityInput.value);
-        if (currentValue > 1) {
-            quantityInput.value = currentValue - 1;
-        }
-    });
+        decreaseButton.addEventListener("click", function () {
+            let currentValue = parseInt(quantityInput.value);
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+            }
+        });
 
-    increaseButton.addEventListener("click", function() {
-        let currentValue = parseInt(quantityInput.value);
-        quantityInput.value = currentValue + 1;
+        increaseButton.addEventListener("click", function () {
+            let currentValue = parseInt(quantityInput.value);
+            quantityInput.value = currentValue + 1;
+        });
     });
-});
 
 </script>
 <script>
     // Store the quantity value in local storage on button click
-    document.getElementById('buynoww').addEventListener('click', function() {
+    document.getElementById('buynoww').addEventListener('click', function () {
         const qua = document.getElementById('quantity').value; // Get the value of the input
         localStorage.setItem('quantity', qua); // Store the value in local storage
         window.location.href = '/checkout.html'; // Redirect to checkout page
     });
-  </script>
+</script>
 <script src="js/script.js"></script>
+
 </html>
