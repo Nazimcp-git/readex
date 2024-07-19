@@ -61,7 +61,7 @@
                         <input type="text" id="quantity" value="1" readonly>
                         <button id="increase" class="btn">+</button>
                     </div>
-                    <div class="buynowbtn" id="buynow">
+                    <div class="buynowbtn" id="buynoww">
             <div class="butbtncontent">Buy Now</div>
             <div class="arrowshape">
                 <div class="arrow">
@@ -200,6 +200,12 @@ function closeModal() {
         let currentValue = parseInt(quantityInput.value);
         quantityInput.value = currentValue + 1;
     });
+});
+
+</script>
+<script>
+    document.getElementById('buynoww').addEventListener('click', function() {
+    window.location.href = '/checkout.html';
 });
 
 </script>

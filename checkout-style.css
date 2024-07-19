@@ -145,7 +145,7 @@ html {
     .navbar-links .buy{
         color: rgb(0, 0, 0);
         text-decoration: none;
-        background-color: ;
+        background-color: none;
         outline: 0px solid black;
         
     background-color: white;
@@ -174,157 +174,6 @@ hr{
     opacity: 0.3;
 }
 
-.home{
-    padding: 50px 180px;
-}
-.home .section{
-        display: flex;
-    
-}
-.col2{
-    width: 50%;
-    text-align: center;
-}
-
-.col1{
-    width: 50%;
-    line-height: 30px;
-}
-.mobile{
-    display: none;
-}
-.home .col1 .data{
-    opacity: 0.7;
-}
-.home .section .col2 img{
-    width: 60%;
-}
-.linee{
-    margin: 3px 0px;
-}
-.data{
-    margin-top: -7px;
-}
-
-.slideshow-container {
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-    touch-action: pan-y;
-}
-
-.mySlides {
-    display: none;
-}
-
-.mySlides img {
-    border-radius: 15px;
-}
-
-.dot-container {
-    text-align: center;
-    padding-top: 10px;
-}
-
-.dot {
-    height: 8px;
-    width: 8px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-    cursor: pointer;
-}
-
-.active, .dot:hover {
-    background-color: #717171;
-}
-@media (max-width: 768px){
-    .home{
-        padding: 30px 30px;
-    }
-    .home .section{
-            display: block;
-            align-items: center;
-        
-    }
-    .col2{
-        width: 100%;
-        text-align: center;
-    }
-    .col1{
-        width: 50%;
-        line-height: 30px;
-    }
-    .mobile{
-        display: block;
-        line-height: 30px;
-    }
-    .desk{
-        display: none;
-    }
-    .home .col1 .data{
-        opacity: 0.7;
-    }
-    .home .col3 .data{
-        opacity: 0.7;
-    }
-    .home .section .col2 img{
-        width: 80%;
-        margin-bottom: 0px;
-    }
-    .dot{
-        margin-bottom: 25px;
-    }
-}
-
-
-
-
-/* Modal styles */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
-    padding-top: 50px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-    overflow: auto; /* Enable scroll if needed */
-}
-
-/* Modal Content (image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 40%; /* Adjust as needed */
-    max-width: 800px; /* Adjust as needed */
-}
-
-/* Close button */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-
 .pricecard{
     padding: 50px 180px;
 }
@@ -340,14 +189,16 @@ hr{
 .pricecard .section .col2{
     width: 30%;
     text-align: right;
+    padding-top: 40px;
 }
 .pricecard .section .col1 img{
-    width: 25%;
+    width: 14%;
 }
 .pricecard .section .col1 h2{
     margin-top: -20px;
     padding: 15px 0px;
     font-weight: 500;
+    font-size: 28px;
 }
 .pricecard .section .col1 .freedeli{
     padding: 10px 20px;
@@ -369,33 +220,37 @@ hr{
     display: none;
 }
 
-
-
 @media (max-width: 768px){
     .pricecard{
         padding: 30px 30px;
-        display: none;
+        margin-top: 90px;
     }
     .pricecard .section{
         outline: 1px solid black;
         border-radius: 25px;
-        display: block;
-        padding: 40px 40px;
+        display: flex;
+        padding: 28px 28px;
     }
     .pricecard .section .col1{
-        width: 70%;
+        width: 60%;
     }
     .pricecard .section .col2{
-        width: 30%;
-        text-align: left;
+        width: 40%;
+        text-align: right;
+        padding-top: 30px;
+        font-size: 15px;
+    }
+    .pricecard .section .col2 h3{
+        font-size: 19px;
     }
     .pricecard .section .col1 img{
-        width: 25%;
+        width: 34%;
     }
     .pricecard .section .col1 h2{
         margin-top: -20px;
         padding: 15px 0px;
         font-weight: 500;
+        font-size: 15px;
     }
     .pricecard .section .col1 .freedeli{
         padding: 10px 20px;
@@ -413,17 +268,30 @@ hr{
         color: #828282;
         font-weight: 400;
     }
-    .pricejpg{
-        display: block;
-        width: 100%;
-        text-align: center;
-        height: auto;
-        padding: 0px 30px;
-    }
-    .pricejpgimg{
-        width: 100%;
-    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -558,3 +426,4 @@ hr{
         color: white;
     }
 }
+

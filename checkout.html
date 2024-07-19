@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="checkout-style.css">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Nazimcp-git/readex/main/favicon.jpg" type="image/x-icon">
-    <title>Check Out - Readex</title>
+    <title>Check Out - Readex Adjustable Quran Stand</title>
+    <link rel="stylesheet" href="checkou-style.css">
 </head>
 <body>
     <nav class="navbar">
@@ -25,90 +24,6 @@
         </div>
     </nav>
     <hr>
-
-    <div class="home">
-        <div class="section">
-            <div class="col1 desk">
-                <p style="font-weight: 500;">Height:</p>
-                <p class="data">72 - 106 cm</p>
-                <div class="linee" style="width: 100%; height: 1px;background-color: #979797;" ></div>
-                <p style="font-weight: 500;">Width:</p>
-                <p class="data">42 cm</p>
-                <div class="linee" style="width: 100%; height: 1px;background-color: #979797;" ></div>
-                <p style="font-weight: 500;">Weight:</p>
-                <p class="data">6 Kg</p>
-                <div class="linee" style="width: 100%; height: 1px;background-color: #979797;" ></div>
-                <p style="font-weight: 500;">Material:</p>
-                <p class="data">Wood</p>
-                <div class="linee" style="width: 100%; height: 1px;background-color: #979797;" ></div>
-                <p style="font-weight: 500;">Colour:</p>
-                <p class="data">White Teak/Brown</p>
-                <div class="linee" style="width: 100%; height: 1px;background-color: #979797;" ></div>
-                
-            </div>
-            <div class="col2">
-                <div class="imgframe">
-                    <div class="slideshow-container">
-                        <div class="mySlides">
-                            <img src="img/product-1.jpg" onclick="openModal('img/product-1.jpg')" alt="">
-                        </div>
-                        <div class="mySlides">
-                            <img src="img/product-2.jpg" onclick="openModal('img/product-2.jpg')" alt="">
-                        </div>
-                        <div class="mySlides">
-                            <img src="img/product-3.jpg" onclick="openModal('img/product-3.jpg')" alt="">
-                        </div>
-                        <div class="mySlides">
-                            <img src="img/product-4.jpg" onclick="openModal('img/product-4.jpg')" alt="">
-                        </div>
-                    </div>
-                    <div class="dot-container">
-                        <span class="dot" onclick="currentSlide(1)"></span> 
-                        <span class="dot" onclick="currentSlide(2)"></span> 
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span> 
-                    </div>
-                </div>
-            </div>
-            <div class="col3 mobile">
-                <p style="font-weight: 500;">Height:</p>
-                <p class="data">72 - 106 cm</p>
-                <div class="linee" style="width: 100%; height: 1px;background-color: #979797;" ></div>
-                <p style="font-weight: 500;">Width:</p>
-                <p class="data">42 cm</p>
-                <div class="linee" style="width: 100%; height: 1px;background-color: #979797;" ></div>
-                <p style="font-weight: 500;">Weight:</p>
-                <p class="data">6 Kg</p>
-                <div class="linee" style="width: 100%; height: 1px;background-color: #979797;" ></div>
-                <p style="font-weight: 500;">Material:</p>
-                <p class="data">Wood</p>
-                <div class="linee" style="width: 100%; height: 1px;background-color: #979797;" ></div>
-                <p style="font-weight: 500;">Colour:</p>
-                <p class="data">White Teak/Brown</p>
-                <div class="linee" style="width: 100%; height: 1px;background-color: #979797;" ></div>
-                
-            </div>
-        </div>
-    </div>
-
-
-
-    <div id="myModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImg">
-    </div>
-
-
-<div class="pricejpg">
-    <img class="pricejpgimg" src="img/pricecard.png" alt="">
-
-</div>
-    
-
-
-
-
-
     <div class="pricecard">
         <div class="section">
             <div class="col1">
@@ -119,9 +34,8 @@
             </a>
             </div>
             <div class="col2">
-                <h3>₹3950</h3>
-                <del><h3 style="color: red; font-size: 24px;">₹4500</h3></del>
-                <h4>Save upto ₹550</h4>
+                <h3>Total : ₹<span id="price">3950</span></h3>
+                
             </div>
             
         </div>
@@ -165,76 +79,4 @@
     </div>
 </body>
 <script src="script.js"></script>
-<script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (let i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-    }
-    
-    let touchstartX = 0;
-    let touchendX = 0;
-    
-    const slider = document.querySelector('.slideshow-container');
-    
-    slider.addEventListener('touchstart', (e) => {
-        touchstartX = e.changedTouches[0].screenX;
-    }, false);
-    
-    slider.addEventListener('touchend', (e) => {
-        touchendX = e.changedTouches[0].screenX;
-        handleGesture();
-    }, false);
-    
-    slider.addEventListener('mousedown', (e) => {
-        touchstartX = e.clientX;
-    }, false);
-    
-    slider.addEventListener('mouseup', (e) => {
-        touchendX = e.clientX;
-        handleGesture();
-    }, false);
-    
-    function handleGesture() {
-        if (touchendX < touchstartX) plusSlides(1);
-        if (touchendX > touchstartX) plusSlides(-1);
-    }
-    
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-    </script>
-    
-<script>
-    // Open the Modal
-function openModal(imageUrl) {
-    var modal = document.getElementById('myModal');
-    var modalImg = document.getElementById("modalImg");
-    modal.style.display = "block";
-    modalImg.src = imageUrl;
-}
-
-// Close the Modal
-function closeModal() {
-    var modal = document.getElementById('myModal');
-    modal.style.display = "none";
-}
-
-</script>
 </html>
