@@ -427,3 +427,33 @@ hr{
     }
 }
 
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 9px;
+}
+
+.icon.facebook {
+    background-image: url('../img/fb.svg');
+}
+
+.icon.whatsapp {
+    background-image: url('../img/wa.svg');
+}
+
+.icon.instagram {
+    background-image: url('../img/insta.svg');
+}
+
+.icon.linkedin {
+    background-image: url('../img/yt.svg');
+}
