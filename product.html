@@ -16,8 +16,8 @@
         </a>
         <div class="navbar-links">
             <ul>
-                <li><a href="#about" class="nobuy">About</a></li>
-                <li><a href="#contact" class="nobuy">Contact Us</a></li>
+                <li><a href="/#about" class="nobuy">About</a></li>
+                <li><a href="/#contact" class="nobuy">Contact Us</a></li>
                 <li><a href="/checkout.html" class="buy">Buy Now</a></li>
                 <li><a href="/policy.html" class="nobuy mobile">Policy</a></li>
             </ul>
@@ -25,7 +25,7 @@
     </nav>
     <hr>
     <div class="home">
-        <div class="scetion">
+        <div class="section">
             <div class="col1">
                 <div class="imgframe">
                     <div class="slideshow-container">
@@ -49,9 +49,64 @@
                         <span class="dot" onclick="currentSlide(4)"></span> 
                     </div>
                 </div>
+                
             </div>
             <div class="col2">
+                <h1>Readex-Adjustable 
+                    Quran Stand</h1>
+                    <p class="price">₹3950 <del>₹4500</del> <span>Save upto ₹550</span></p>
+                    <p class="quantity">Quantity:</p>
+                    <div class="quantity-container">
+                        <button id="decrease" class="btn">-</button>
+                        <input type="text" id="quantity" value="1" readonly>
+                        <button id="increase" class="btn">+</button>
+                    </div>
+                    <div class="buynowbtn" id="buynow">
+            <div class="butbtncontent">Buy Now</div>
+            <div class="arrowshape">
+                <div class="arrow">
+                    <img style="margin-left: 100px;" src="img/arrow.png" alt="">
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
 
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+
+
+
+
+    <div class="descri">
+        <div class="section">
+            <div class="descriptio">
+                <hr>
+                <h1 class="dtitle">
+                    Description
+                </h1>
+                <p class="discon">Enhance your Quran reading with our Readex Adjustable Quran Stand. Made from high-quality wood, it’s built to last. You can adjust the height up to 106 cm for comfortable standing reading. With wheels for easy movement, you can take it anywhere. Easy to set up and perfect for finding the ideal reading position, it helps you focus on the text effortlessly.</p>
+                <hr style="margin-bottom: 15px;">
+                <div class="details">
+                    <div class="dcol1">
+                        <p>Height</p>
+                        <p>Width</p>
+                        <p>Weight</p>
+                        <p>Material</p>
+                        <p>Colour</p>
+                    </div>
+                    <div class="dcol2">
+                        <p>:72 - 106 cm</p>
+                        <p>:42 cm</p>
+                        <p>:6 kg</p>
+                        <p>:Wood</p>
+                        <p>:White Teak/Brown</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -128,4 +183,25 @@ function closeModal() {
 }
 
 </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const decreaseButton = document.getElementById("decrease");
+    const increaseButton = document.getElementById("increase");
+    const quantityInput = document.getElementById("quantity");
+
+    decreaseButton.addEventListener("click", function() {
+        let currentValue = parseInt(quantityInput.value);
+        if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+        }
+    });
+
+    increaseButton.addEventListener("click", function() {
+        let currentValue = parseInt(quantityInput.value);
+        quantityInput.value = currentValue + 1;
+    });
+});
+
+</script>
+<script src="script.js"></script>
 </html>

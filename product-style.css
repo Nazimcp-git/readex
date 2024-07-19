@@ -164,12 +164,6 @@ html {
     border-radius: 50px;
     font-weight: 500;
 }
-.home .section{
-    margin-top: 90px;
-}
-.imgframe{
-    margin-top: 90px;
-}
 }
 
 hr{
@@ -178,6 +172,9 @@ hr{
     opacity: 0.3;
 }
 
+
+
+
 .home{
     padding: 50px 180px;
 }
@@ -185,12 +182,29 @@ hr{
         display: flex;
     
 }
-.col1{
-    width: 50%;
-}
 .col2{
     width: 50%;
 }
+
+.col1{
+    width: 50%;
+}
+.mobile{
+    display: none;
+}
+.home .col1 .data{
+    opacity: 0.7;
+}
+.home .section .col2 img{
+    width: 10%;
+}
+.linee{
+    margin: 3px 0px;
+}
+.data{
+    margin-top: -7px;
+}
+
 .slideshow-container {
     position: relative;
     max-width: 100%;
@@ -201,15 +215,15 @@ hr{
 
 .mySlides {
     display: none;
+    
+    text-align: center;
 }
 
 .mySlides img {
     border-radius: 15px;
-    width: 50%;
+    width: 70%;
 }
-.imgframe{
-    width: 100%;
-}
+
 .dot-container {
     text-align: center;
     padding-top: 10px;
@@ -229,36 +243,83 @@ hr{
 .active, .dot:hover {
     background-color: #717171;
 }
-@media (max-width: 768px){
-    .home{
-        padding: 30px 30px;
-    }
-    .home .section{
-            display: block;
-            align-items: center;
-        
-    }
-    .mobile{
-        display: block;
-        line-height: 30px;
-    }
-    .desk{
-        display: none;
-    }
-    .home .col1 .data{
-        opacity: 0.7;
-    }
-    .home .col3 .data{
-        opacity: 0.7;
-    }
-    .home .section .col2 img{
-        width: 80%;
-        margin-bottom: 0px;
-    }
-    .dot{
-        margin-bottom: 25px;
-    }
+
+span{
+    color: #828282;
+    font-size: 15px;
 }
+.price{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.quantity{
+    margin-top: 20px;
+    font-size: 14px;
+    color: #828282;
+    margin-bottom: 7px;
+}
+.quantity-container {
+    display: flex;
+    outline: 1px solid black;
+    width: 130px;
+    padding: 5px 20px;
+    border-radius: 50px;
+}
+
+.btn {
+    background-color: #ffffff;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    user-select: none;
+    color: black;
+}
+
+
+#quantity {
+    width: 50px;
+    text-align: center;
+    font-size: 20px;
+    margin: 0 0px;
+    border: 0px solid white;
+}   
+.col2 h1{
+    font-weight: 500;
+}
+
+
+
+
+.buynowbtn{
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 30px;
+    padding-right: 10px;
+    background-color: #700000;
+    display: flex;
+}
+
+.buynowbtn img{
+    width: 10%;
+    height: auto;
+    float: right;
+    background-color: #930000;
+    border-radius: 50px;
+    padding: 3px 3px;
+}
+.butbtncontent{
+    width: 50%;
+    text-align: left;
+}
+.arrowshape{
+    float: left;
+    width: 50%;
+}
+
 
 
 
@@ -303,3 +364,182 @@ hr{
     cursor: pointer;
 }
 
+
+
+
+
+
+@media (max-width: 768px){
+    .home{
+        padding: 30px 30px;
+        margin-top: 90px;
+    }
+    .home .section{
+            display: block;
+            align-items: center;
+        
+    }
+    .col2{
+        width: 100%;
+    }
+    .col1{
+        width: 100%;
+        line-height: 30px;
+        padding: 0;
+        
+    }
+    .slideshow-container {
+        max-width: 100%;
+        margin: auto;
+        overflow: hidden;
+        touch-action: pan-y;
+    }
+    .mySlides{
+        text-align: center;
+    }
+    .mySlides img {
+        border-radius: 15px;
+        width: 80%;
+    }
+
+    
+    .mobile{
+        display: block;
+        line-height: 30px;
+    }
+    .desk{
+        display: none;
+    }
+    .home .col1 .data{
+        opacity: 0.7;
+    }
+    .home .col3 .data{
+        opacity: 0.7;
+    }
+    .home .section .col2 img{
+        width: 15%;
+        margin-bottom: 0px;
+    }
+    .dot{
+        margin-bottom: 25px;
+    }
+    /* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Adjust as needed */
+    max-width: 800px; /* Adjust as needed */
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+}
+
+
+
+
+
+.descri{
+    padding: 50px 180px;
+}
+.descri .descriptio h1{
+    padding-top: 15px;
+    margin: 0;
+}
+.descri .descriptio .discon{
+    padding-bottom: 15px;
+    margin: 0;
+    line-height: 23px;
+}
+.descri .details{
+    display: flex;
+    padding: 0px 0px;
+}
+.dtitle{
+    margin-bottom: 7px;
+}
+.dcol1{
+    width: 12%;
+}
+.dcol2{
+    width: 20%;
+}
+.dcol1 p{
+    font-weight: 600;
+    padding: 0;
+    padding-bottom: 5px;
+}
+.dcol2 p{
+    font-weight: 400;
+    padding: 0;
+    color: #A9A9A9;
+    padding-bottom: 5px;
+}
+
+@media (max-width: 768px){
+    
+.descri{
+    padding: 30px 30px;
+}
+.descri .descriptio h1{
+    padding-top: 15px;
+    margin: 0;
+    margin-bottom: 7px;
+}
+.descri .descriptio .discon{
+    padding-bottom: 15px;
+    margin: 0;
+    line-height: 23px;
+}
+.descri .details{
+    display: flex;
+    padding: 0px 0px;
+}
+.dcol1{
+    width: 30%;
+}
+.dcol2{
+    width: 50%;
+}
+.dcol1 p{
+    font-weight: 600;
+    padding: 0;
+    padding-bottom: 5px;
+}
+.dcol2 p{
+    font-weight: 400;
+    padding: 0;
+    color: #A9A9A9;
+    padding-bottom: 5px;
+}
+
+}

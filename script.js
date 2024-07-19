@@ -7,5 +7,5 @@ toggleButton.addEventListener('click', () => {
 
 
 document.getElementById('buynow').addEventListener('click', function() {
-    window.location.href = '/checkout.html';
+    window.location.href = '/product.html';
 });
