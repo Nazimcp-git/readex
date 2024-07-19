@@ -93,7 +93,10 @@
 
 
 
-
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
 
 
 <div class="pricejpg">
@@ -217,4 +220,21 @@
         showSlides(slideIndex += n);
     }
     </script>
+    
+<script>
+    // Open the Modal
+function openModal(imageUrl) {
+    var modal = document.getElementById('myModal');
+    var modalImg = document.getElementById("modalImg");
+    modal.style.display = "block";
+    modalImg.src = imageUrl;
+}
+
+// Close the Modal
+function closeModal() {
+    var modal = document.getElementById('myModal');
+    modal.style.display = "none";
+}
+
+</script>
 </html>
