@@ -81,6 +81,9 @@ html {
       margin-right: -15px;
   }
   
+.navbar-links .close{
+    display: none;
+}
   .toggle-button .bar {
       height: 3px;
       width: 100%;
@@ -129,10 +132,13 @@ html {
           z-index: 10;
       }
       .navbar-links img{
-          display: block;
-          width: 10%;
-          margin-left: 75%;
-      }
+        display: block;
+        width: 10%;
+        margin-left: 95%;
+    }
+    .navbar-links .close{
+        display: block;
+    }
   
       .navbar-links ul {
           width: 100%;
