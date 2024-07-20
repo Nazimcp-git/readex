@@ -49,6 +49,9 @@ html {
     border-radius: 50px;
     font-weight: 400;
 }
+.navbar-links img{
+    display: none;
+}
 .navbar-links .buy{
         color: rgb(255, 255, 255);
         text-decoration: none;
@@ -124,6 +127,11 @@ html {
         text-align: left;
         box-shadow: 2px 2px black;
         z-index: 10;
+    }
+    .navbar-links img{
+        display: block;
+        width: 10%;
+        margin-left: 75%;
     }
 
     .navbar-links ul {
@@ -490,7 +498,8 @@ hr{
 .type{
     
     width: 100%; /* Set your desired width */
-    height: 600px; /* Set your desired height */
+    height: 
+    668px; /* Set your desired height */
     background-image: url('../img/bg-1.jfif');
     background-size: cover;
     background-repeat: no-repeat;
@@ -524,7 +533,7 @@ hr{
     .type{
     
         width: 100%; /* Set your desired width */
-        height: 100vh; /* Set your desired height */
+        height: 90vh; /* Set your desired height */
         background-image: url('../img/bg-1.jfif');
         background-size: cover;
         background-repeat: no-repeat;
@@ -699,3 +708,6 @@ hr{
 .icon.linkedin {
     background-image: url('../img/yt.svg');
 }
+
+
+
