@@ -221,8 +221,36 @@
     </div>
 
 
+    <div id="termsPopup" class="popup">
+        <div class="popup-content">
+            <p>By using our site, you agree to our <a href="/terms-and-conditions.html" target="_blank">Terms and Conditions</a>.</p>
+            <button id="agreeBtn">Agree</button>
+            <button>Don't Agree</button>
+        </div>
+    </div>
+
 
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+    const popup = document.getElementById('termsPopup');
+    const agreeBtn = document.getElementById('agreeBtn');
+
+    // Check local storage for user's agreement
+    const userAgreed = localStorage.getItem('termsAgreed');
+
+    if (!userAgreed) {
+        // Show the popup if the user hasn't agreed yet
+        popup.style.display = 'block';
+    }
+
+    // Hide the popup and save agreement in local storage
+    agreeBtn.addEventListener('click', () => {
+        popup.style.display = 'none';
+        localStorage.setItem('termsAgreed', 'true');
+    });
+});
+</script>
 <script src="js/script.js"></script>
 <script>
     let slideIndex = 1;
