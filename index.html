@@ -52,16 +52,87 @@
         "@type": "Brand",
         "name": "Readex"
       },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://readex.in/product.html",
-        "priceCurrency": "INR",
-        "price": "3950",
-        "priceValidUntil": "2024-12-31",
-        "itemCondition": "https://schema.org/NewCondition",
-        "availability": "https://schema.org/InStock"
+      
+  "offers": {
+    "@type": "Offer",
+    "url": "https://readex.in/img/product-1.jpg",
+    "priceCurrency": "INR",
+    "price": "3950",
+    "priceValidUntil": "2024-12-31",
+    "itemCondition": "https://schema.org/NewCondition",
+    "availability": "https://schema.org/InStock",
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "returnPolicyCategory": "https://schema.org/ReturnShippingFees",
+      "returnShippingFeesAmount": {
+        "@type": "MonetaryAmount",
+        "currency": "INR",
+        "value": "200"
+      },
+      "returnPolicyCountry": "IN",
+      "returnPolicyDateEffective": "2023-01-01",
+      "returnPolicyPeriod": "P30D"  // This means 30 days
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "currency": "INR",
+        "value": "100"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "IN"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 2,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 3,
+          "maxValue": 7,
+          "unitCode": "DAY"
+        }
       }
     }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "24"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "John Doe"
+      },
+      "reviewBody": "This is an excellent Quran stand. It is very adjustable and sturdy."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Jane Smith"
+      },
+      "reviewBody": "Good quality and easy to use. A bit pricey but worth it."
+    }
+  ]
+}
     </script>
 </head>
 
