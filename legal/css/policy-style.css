@@ -90,7 +90,7 @@ html {
   
 .navbar-links .close{
     display: none;
-}z
+}
   .toggle-button .bar {
       height: 3px;
       width: 100%;
@@ -198,6 +198,7 @@ hr{
 .home{
     padding: 30px 130px;
     padding-bottom: 0px;
+    
 }
 .home .section{
     line-height: 30px;
@@ -223,5 +224,6 @@ hr{
     .home{
         padding: 30px 30px;
         padding-bottom: 0px;
+        margin-top: 90px;
     }
 }
