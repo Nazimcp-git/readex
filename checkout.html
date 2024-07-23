@@ -52,13 +52,13 @@
     <div class="shippingdetails">
         <div class="section">
             <h1>Shipping Details</h1>
-            <input type="text" name="" id="" placeholder="Name">
-            <input type="text" name="" id="" placeholder="Address">
-            <input type="text" name="" id="" placeholder="Pin code">
-            <input type="text" name="" id="" placeholder="Mobile Number">
-            <input type="text" name="" id="" placeholder="Country">
-            <input type="text" name="" id="" placeholder="State">
-            <div class="buynowbtn">
+            <input type="text" name="" id="name" placeholder="Name">
+            <input type="text" name="" id="address" placeholder="Address">
+            <input type="text" name="" id="pincode" placeholder="Pin code">
+            <input type="text" name="" id="number" placeholder="Mobile Number">
+            <input type="text" name="" id="country" placeholder="Country">
+            <input type="text" name="" id="state" placeholder="State">
+            <div class="buynowbtn" id="buynowbtn">
                 <div class="butbtncontent">
                     Payment </div>
                 <div class="arrowshape">
@@ -135,16 +135,10 @@
 
 
 <script src="js/script.js"></script>
-<script>
-    // Retrieve and display the quantity value when the page loads
-    window.addEventListener('DOMContentLoaded', function () {
-        const quantity = localStorage.getItem('quantity'); // Retrieve the value from local storage
-        const unitPrice = 3950; // Unit price
-        const totalPrice = unitPrice * quantity;
-        if (quantity) {
-            document.getElementById('price').innerHTML = `${totalPrice}`; // Display the value
-        }
-    });
-</script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="js/payment.js"></script>
+    
 
 </html>
