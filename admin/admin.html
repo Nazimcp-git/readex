@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Order Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #528ff0;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+</head>
+<body>
+    <h2>Order Details</h2>
+    <table id="ordersTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Pincode</th>
+                <th>Address</th>
+                <th>Number</th>
+                <th>Country</th>
+                <th>State</th>
+                <th>Payment ID</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCl2ev2XzSAC7HecOGncwDqrtA8ufoeyIE",
+            authDomain: "readex-ba055.firebaseapp.com",
+            databaseURL: "https://readex-ba055-default-rtdb.firebaseio.com",
+            projectId: "readex-ba055",
+            storageBucket: "readex-ba055.appspot.com",
+            messagingSenderId: "698826951590",
+            appId: "1:698826951590:web:b426c1e937ca2f6edcdd67",
+            measurementId: "G-K14DMDQEKT"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Check if admin is authenticated
+        if (localStorage.getItem('adminToken') !== 'authenticated') {
+            window.location.href = 'index.html';
+        }
+
+        firebase.database().ref('orders').once('value').then(function(snapshot) {
+            var orders = snapshot.val();
+            var ordersTable = document.getElementById('ordersTable').getElementsByTagName('tbody')[0];
+
+            for (var orderId in orders) {
+                if (orders.hasOwnProperty(orderId)) {
+                    var order = orders[orderId];
+                    var row = ordersTable.insertRow();
+
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    var cell3 = row.insertCell(2);
+                    var cell4 = row.insertCell(3);
+                    var cell5 = row.insertCell(4);
+                    var cell6 = row.insertCell(5);
+                    var cell7 = row.insertCell(6);
+                    var cell8 = row.insertCell(7);
+
+                    cell1.innerHTML = order.name;
+                    cell2.innerHTML = order.pincode;
+                    cell3.innerHTML = order.address;
+                    cell4.innerHTML = order.number;
+                    cell5.innerHTML = order.country;
+                    cell6.innerHTML = order.state;
+                    cell7.innerHTML = order.payment_id;
+                    cell8.innerHTML = order.amount;
+                }
+            }
+        }).catch(function(error) {
+            console.error('Error fetching orders:', error);
+        });
+    </script>
+</body>
+</html>

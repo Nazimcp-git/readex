@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
     const quantity = localStorage.getItem('quantity'); // Retrieve the value from local storage
-    const unitPrice = 50; // Unit price
+    const unitPrice = 3950; // Unit price
     const totalPrice = unitPrice * quantity;
     if (quantity) {
         document.getElementById('price').innerHTML = `${totalPrice}`; // Display the value
@@ -26,7 +26,7 @@ document.getElementById('buynowbtn').onclick = function(e) {
     e.preventDefault(); // Prevent default form submission
 
     const quantity = localStorage.getItem('quantity'); // Retrieve the value from local storage
-    const unitPrice = 50; // Unit price
+    const unitPrice = 3950; // Unit price
     const totalPrice = unitPrice * quantity;
 
     var name = document.getElementById('name').value.trim();
