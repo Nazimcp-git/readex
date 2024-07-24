@@ -69,11 +69,13 @@ document.getElementById('buynowbtn').onclick = function(e) {
             updates['/orders/' + newOrderKey] = orderData;
             firebase.database().ref().update(updates)
                 .then(() => {
-                    alert('Order details saved successfully.');
+                    localStorage.setItem('status', 'yes');
+                    window.location.href = '/succsess.html';
                 })
                 .catch((error) => {
                     alert('Error saving order details: ' + error.message);
                 });
+            
         },
         "prefill": {
             "name": name,
@@ -84,7 +86,7 @@ document.getElementById('buynowbtn').onclick = function(e) {
             "address": address
         },
         "theme": {
-            "color": "#528ff0"
+            "color": "#700000"
         }
     };
 
