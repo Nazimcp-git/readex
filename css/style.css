@@ -13,6 +13,101 @@ body {
 html {
     scroll-behavior: smooth;
   }
+
+  #mobile-viwe{
+    display:block;
+    width:100%;
+    margin:10px auto;
+    height:310px;
+    background:url("/img/21374002-9af4-4c47-8938-bb1ee2e67842.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius:30px;
+    padding:50px ;
+  }
+  #mobile-viwe #text{
+    display:flex;
+    flex-direction: column;
+    width:90%;
+    height:145px;
+  }
+  #mobile-viwe #text h1{
+    font-size: calc(100% + .5vw);
+    animation: smooth 3.5s ease-in-out 1;
+    display: block;
+    margin-bottom: 10px;
+  }
+  #mobile-viwe #text p{
+    font-size: calc(70% + .5vw);
+    margin-top: 5px;
+    animation: smooth 3.5s ease-in-out 1;
+    display: block;
+  }
+  #mobile-viwe #button-div{
+    width:100%;
+    height:40px;
+    margin-top: 15px;
+  }
+  #mobile-viwe #button-div div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width:170px;
+  border-radius: 30px;
+  border:none;
+  background-color: black;
+  color: #fff;
+  text-decoration: none;
+  }
+  #mobile-viwe #button-div div img{
+    width:30px;
+    background: #ffab49;
+    border-radius: 30px;
+    margin-right: 5px;
+  }
+  #mobile-viwe #button-div div p{
+    font-size: 17px;
+    margin-left: 16px;
+    font-weight: 600;
+  }
+  @keyframes smooth {
+    0%{opacity: 0;}
+    20%{opacity: 1;}
+    80%{opacity: 1;}
+    100%{opacity: 0;}
+  }
+  @media (max-width: 768px) {
+    #mobile-viwe{
+        padding:35px;
+        height:270px;
+      }
+      #mobile-viwe #button-div{
+        margin-bottom: 0px;
+        height:35px;
+        margin-top: 5px;
+      }
+      #mobile-viwe #text{
+        width:100%;
+        height:165px;
+      }
+      #mobile-viwe #text h1{
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+    #mobile-viwe #text p{
+        font-size: calc(60% + 1vw);
+    }
+    #mobile-viwe #button-div div{
+        width:150px;
+        }
+    #mobile-viwe #button-div div img{
+        width:25px;
+    }
+    #mobile-viwe #button-div div p{
+        font-size: 15px;
+    }
+    }
 .navbar {
     display: flex;
     justify-content: space-between;
