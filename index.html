@@ -205,35 +205,13 @@
     <div class="feature">
         <div class="frame">
             <h1 style="font-size: 28px;">Features</h1>
-            <div class="row">
-                <div class="col">
-                    <div class="f-item col11">
-                        <h2 class="fetureh2"  style="font-size: 23px;">Sturdy and durable
-                            construction</h2>
-                        <p>The stand is made of high-quality wood and is designed to last for years of use.</p>
-                    </div>
-                    <div class="f-item col11">
-                        <h2 class="fetureh2" style="font-size: 23px;">Adjustable height</h2>
-                        <p>The stand can be adjusted to fit your needs, so you can find the perfect position for your
-                            reading. The height can be adjusted up to 106 cm, so you can read by standing.</p>
-                    </div>
+            <div id="mobile-viwe">
+                <div id="text">
+                    <h1 id="heading-text"></h1>
+                    <p id="peragraf-text"></p>
                 </div>
-                <div class="col2">
-                    <div class="f-item col21">
-                        <h2 class="fetureh22"  style="font-size: 23px;">Wheels for easy portability</h2>
-                        <p>The stand has wheels for easy movement, so you can take it with you wherever you go.</p>
-                    </div>
-                    <div class="f-item col21" >
-                        <h2 class="fetureh22"  style="font-size: 23px;">Easy to use</h2>
-                        <p>The stand is easy to set up and use, so you can start reading right away.</p>
-                    </div>
-                    <div class="f-item col21">
-                        <h2 class="fetureh22"  style="font-size: 23px;">Perfect for reading
-                            the Quran</h2>
-                        <p>The stand is the perfect size for reading the Quran, and it will help you to focus on the
-                            text.</p>
-                    </div>
-                </div>
+                <div id="button-div" ><div id="buynow1"><p>Shop now</p><img src="img/arrowforshopnow1.png"></div>
+             </div>
             </div>
         </div>
     </div>
@@ -431,5 +409,50 @@
         type();
     });
 </script>
+<script>
+    window.onload = function () {
+        const heading = document.getElementById("heading-text");
+        const paragraf = document.getElementById("peragraf-text");
+        let index = 0;
+        let headings = [
+          "Sturdy and durable construction", 
+          "Wheels for easy portability", 
+          "Adjustable height", 
+          "Easy to use", 
+         "Perfect for reading the Quran"
+        ];
+        let paragrafes=[
+            "The stand is made of high-quality wood and is designed to last for years of use.",
+            "The stand has wheels for easy movement, so you can take it with you wherever you go.",
+            "The stand can be adjusted to fit your needs, so you can find the perfect position for your reading. The height can be adjusted up to 106 cm, so you can read by standing.",
+            "The stand is easy to set up and use, so you can start reading right away",
+            "The stand is the perfect size for reading the Quran, and it will help you to focus on the text."
+        ];
+        function call() {
+            if (index<5){
+                index++;
+                setTimeout(exicute, 3500);
+            }
+        }
+        function exicute() {
+            heading.style.display="none";
+                paragraf.style.display="none";
+            if (index==5) {
+                    index=0;
+                }
+            if (index<5) {
+                setTimeout(()=>{
+                    heading.style.display="block";
+                    paragraf.style.display="block";
+                }, 100);
+                
+                heading.textContent = headings[index];
+                paragraf.textContent = paragrafes[index];
+                call();
+            }
+        }
+        exicute();
+    }
+  </script>
 
 </html>
