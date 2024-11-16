@@ -94,96 +94,135 @@ html {
       display: none;
   }
   
-  @media (max-width: 768px) {
-      .mobile{
-          display: block;
-          line-height: 30px;
-      }
-      .desk{
-          display: none;
-      }
-      .navbar{
-          padding: 15px 40px;
-          position: fixed;
-          z-index: 11;
-      }
-      .toggle-button {
-          display: flex;
-          margin-top: 4px;
-      }
-      .brand-title img{
-          width: 40%;
-          margin-top: 2px;
-      }
-  
-      .navbar-links {
-          display: none;
-          flex-direction: column;
-          position: fixed;
-          right: 0;
-          top: 0;
-          height: 100%;
-          width: 250px;
-          padding-top: 2rem;
-          transform: translateX(100%);
-          transition: transform 0.3s ease-in-out;
-          text-align: left;
-          box-shadow: 2px 2px black;
-          z-index: 10;
-      }
-      .navbar-links img{
+ 
+@media (max-width: 768px) {
+    .mobile{
         display: block;
-        width: 10%;
-        margin-left: 95%;
+        line-height: 30px;
+    }
+    .desk{
+        display: none;
+    }
+    .navbar{
+        padding: 15px 40px;
+        position: fixed;
+        z-index: 11;
+    }
+    .toggle-button {
+        display: flex;
+        margin-top: 4px;
+    }
+    .brand-title img{
+        width: 40%;
+        margin-top: 2px;
+    }
+
+    .navbar-links {
+        display: none;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    .links{
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 250px;
+        padding-top: 2rem;
+        text-align: left;
+        z-index: 10;
+        animation: nav-animation .4s ease-in-out 1;
+        background-color: #fff;
+    }
+    @keyframes nav-animation {
+        0%{transform: translateX(250px);}
+        100%{transform: translateX(0px);}
+    }
+    .close-animation{
+        animation: close-animation1 .4s ease-in-out 1;
+    }
+    @keyframes close-animation1 {
+        0%{transform: translateX(0px);}
+        100%{transform: translateX(250px);}
+    }
+    .links button{
+        height:25px;
+        width:25px;
+        margin-left: 80%;
+        background: #fff;
+        border:none;
+    }
+    .navbar-links img{
+        display: block;
+        width: 20px;
+        
     }
     .navbar-links .close{
         display: block;
     }
-  
-      .navbar-links ul {
-          width: 100%;
-          flex-direction: column;
-          padding: 0;
-      }
-  
-      .navbar-links li {
-          text-align: left;
-          margin: 1rem 0;
-      }
-  
-      .navbar-links.active {
-          display: flex;
-          transform: translateX(0);
-          background-color: white;
-      }
-      .navbar-links .buy{
-          color: rgb(0, 0, 0);
-          text-decoration: none;
-          background-color: none;
-          outline: 0px solid black;
-          
-      background-color: white;
-          font-size: medium;
-          padding: 3px 25px;
-          border-radius: 50px;
-          font-weight: 500;
-  }
-  .navbar-links .nobuy{
-      color: rgb(0, 0, 0);
-      text-decoration: none;
-      background-color: white;
-      outline: 0px solid black;
-      font-size: medium;
-      padding: 3px 25px;
-      border-radius: 50px;
-      font-weight: 500;
-  }
-  .home .frame h2{
-      font-size: 25px;
-      margin-top: 90px;
-  }
-  }
 
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navbar-links li {
+        text-align: left;
+        margin: 1rem 0;
+    }
+
+    .navbar-links.active {
+        display: flex;
+        transform: translateX(0);
+        background-color: rgba(0, 0, 0, 0.7);
+        transition:.3s;
+        backdrop-filter: blur(10px); /* Applies blur effect */
+      -webkit-backdrop-filter: blur(10px); /* For Safari support */
+      background: rgba(0, 0, 0, 0.1); /* Semi-transparent overlay */
+    }
+    .navbar-links .buy{
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        background-color: none;
+        outline: 0px solid black;
+        
+    background-color: white;
+        font-size: medium;
+        padding: 3px 25px;
+        border-radius: 50px;
+        font-weight: 500;
+}
+.navbar-links .nobuy{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: white;
+    outline: 0px solid black;
+    font-size: medium;
+    padding: 3px 25px;
+    border-radius: 50px;
+    font-weight: 500;
+}
+.home .frame h2{
+    font-size: 25px;
+    margin-top: 90px;
+}
+.navbar-links .nobuy:focus{
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.brand-title a{
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+  }
 hr{
     margin: 0;
     padding: 0;
