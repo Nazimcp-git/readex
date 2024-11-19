@@ -9,6 +9,7 @@ body {
     padding: 0;
     font-family: Poppins, sans-serif;
 }
+
 html {
     scroll-behavior: smooth;
   }
@@ -195,7 +196,9 @@ html {
 .mobile{
     display: none;
 }
-
+.links button{
+    display: none;
+}
 @media (max-width: 768px) {
     .mobile{
         display: block;
@@ -253,6 +256,7 @@ html {
         100%{transform: translateX(250px);}
     }
     .links button{
+        display: block;
         height:25px;
         width:25px;
         margin-left: 80%;
@@ -286,6 +290,7 @@ html {
         backdrop-filter: blur(10px); /* Applies blur effect */
       -webkit-backdrop-filter: blur(10px); /* For Safari support */
       background: rgba(0, 0, 0, 0.1); /* Semi-transparent overlay */
+      
     }
     .navbar-links .buy{
         color: rgb(0, 0, 0);
@@ -438,11 +443,22 @@ hr{
 
 .mySlides {
     display: none;
-    animation:slide 1s ease-in-out 1;
 }
 @keyframes slide{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
+    0%{transform: translateX(0px);}
+    100%{transform: translateX(700px);}
+}
+@keyframes slide1{
+    0%{transform: translateX(0px);}
+    100%{transform: translateX(-700px);}
+}
+    @keyframes slide3{
+        0%{transform: translateX(700px);}
+        100%{transform: translateX(0px);}
+    }
+    @keyframes slide4{
+        0%{transform: translateX(-700px);}
+        100%{transform: translateX(0px);}
 }
 .mySlides img {
     border-radius: 15px;
