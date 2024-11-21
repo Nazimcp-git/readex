@@ -167,6 +167,15 @@ html {
     padding: 3px 25px;
     border-radius: 50px;
 }
+.navbar-links .track{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: #930000;
+    font-size: small;
+    padding: 3px 25px;
+    border-radius: 50px;
+
+}
 .navbar-links .nobuy:focus{
     outline: none;
     -webkit-tap-highlight-color: transparent;
@@ -314,6 +323,18 @@ html {
     border-radius: 50px;
     font-weight: 500;
 }
+.navbar-links .track{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: #930000;
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 8px 25px;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
 .home .frame h2{
     font-size: 25px;
     margin-top: 90px;
