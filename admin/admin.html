@@ -40,6 +40,7 @@
         <thead>
             <tr>
                 <th>Name</th>
+                <th>Email</th>
                 <th>Pincode</th>
                 <th>Address</th>
                 <th>Number</th>
@@ -89,15 +90,17 @@
                     var cell6 = row.insertCell(5);
                     var cell7 = row.insertCell(6);
                     var cell8 = row.insertCell(7);
+                    var cell9 = row.insertCell(8);
 
                     cell1.innerHTML = order.name;
-                    cell2.innerHTML = order.pincode;
-                    cell3.innerHTML = order.address;
-                    cell4.innerHTML = order.number;
-                    cell5.innerHTML = order.country;
-                    cell6.innerHTML = order.state;
-                    cell7.innerHTML = order.payment_id;
-                    cell8.innerHTML = order.amount;
+                    cell2.innerHTML = order.email;
+                    cell3.innerHTML = order.pincode;
+                    cell4.innerHTML = order.address;
+                    cell5.innerHTML = order.number;
+                    cell6.innerHTML = order.country;
+                    cell7.innerHTML = order.state;
+                    cell8.innerHTML = order.payment_id;
+                    cell9.innerHTML = order.amount;
                 }
             }
         }).catch(function(error) {
