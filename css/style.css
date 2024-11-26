@@ -378,10 +378,12 @@ hr{
     padding-right: 10px;
     background-color: #700000;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .buynowbtn img{
-    width: 4%;
+    width: 35px;
     height: auto;
     float: right;
     background-color: #930000;
