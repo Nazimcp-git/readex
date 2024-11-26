@@ -30,6 +30,7 @@ document.getElementById('buynowbtn').onclick = function(e) {
     const totalPrice = unitPrice * quantity;
 
     var name = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
     var address = document.getElementById('address').value.trim();
     var pincode = document.getElementById('pincode').value.trim();
     var number = document.getElementById('number').value.trim();
@@ -37,7 +38,7 @@ document.getElementById('buynowbtn').onclick = function(e) {
     var state = document.getElementById('state').value.trim();
     var productPrice = document.getElementById('price').innerHTML;
 
-    if (name === '' || address === '' || number === '') {
+    if (name === '' || address === '' || number === ''|| email === '') {
         alert('Please fill in all the fields.');
         return;
     }
@@ -55,6 +56,7 @@ document.getElementById('buynowbtn').onclick = function(e) {
             // Send data to Firebase
             var orderData = {
                 name: name,
+                email: email,
                 pincode: pincode,
                 address: address,
                 number: number,
@@ -79,7 +81,7 @@ document.getElementById('buynowbtn').onclick = function(e) {
         },
         "prefill": {
             "name": name,
-            "email": address,
+            "email": email,
             "contact": number
         },
         "notes": {
