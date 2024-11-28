@@ -362,27 +362,36 @@ span{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height:50px;
 }
 
-.buynowbtn img{
-    width: 30px;
-    height: auto;
-    float: right;
-    background-color: #930000;
-    border-radius: 50px;
-    padding: 3px 3px;
-}
 .butbtncontent{
-    width: 50%;
+    width: 90%;
     text-align: left;
+    font-weight: 500;
+    color: white;
+}
+
+.arrowshape img{
+    width: 20px;
+    height: 20px;
+    color: #f1f1f1;
+    
 }
 .arrowshape{
-    float: left;
-    width: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #FFAB49;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
 }
 
 
-
+.links button{
+    display: none;
+}
 
 
 /* Modal styles */
@@ -522,6 +531,42 @@ span{
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+.buynowbtn{
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 25px;
+    color: rgb(190, 153, 153);
+    padding: 0px 34px 0 30px;
+    padding-right: 10px;
+    background-color: #700000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.butbtncontent{
+    width: 90%;
+    text-align: left;
+    font-weight: 500;
+    color: white;
+    font-size: 18px;
+}
+
+.arrowshape img{
+    width: 25px;
+    height: 25px;
+    color: #f1f1f1;
+    
+}
+.arrowshape{
+    width: 35px;
+    height: 35px;
+    background-color: #FFAB49;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
 }
 }
 
