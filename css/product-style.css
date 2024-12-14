@@ -160,6 +160,7 @@ html {
         margin-left: 80%;
         background: #fff;
         border:none;
+        display: block;
     }
     .navbar-links img{
         display: block;
@@ -387,12 +388,6 @@ span{
     justify-content: center;
     border-radius: 40px;
 }
-
-
-.links button{
-    display: none;
-}
-
 
 /* Modal styles */
 .modal {
